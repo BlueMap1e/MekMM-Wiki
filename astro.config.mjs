@@ -1,11 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+// 修复 CommonMark 对 CJK 邻接加粗/斜体的解析缺陷(如 **银矿石(Silver Ore)**是… 显示原始星号)
+import remarkCjkFriendly from 'remark-cjk-friendly';
 
 export default defineConfig({
 	// Cloudflare Pages 的 pages.dev 域名部署在根路径,无需 base。
 	// 如果以后换了项目名或绑定自定义域名,记得同步修改 site。
 	site: 'https://mekmm-wiki.pages.dev',
+	markdown: {
+		syntaxHighlight: 'shiki',
+		remarkPlugins: [remarkCjkFriendly],
+	},
 	integrations: [
 		starlight({
 			title: 'MekMM Wiki',

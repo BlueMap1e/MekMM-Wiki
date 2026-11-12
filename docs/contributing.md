@@ -64,3 +64,7 @@ import VersionBadge from '../../../components/VersionBadge.astro';
 ```
 
 改完 `npm run build` 验证,再推送。
+
+## 中文加粗须知
+
+站点已启用 `remark-cjk-friendly` 修复 `.md` 文件里「加粗闭合紧跟中文」不生效的问题。但 `.mdx` 走 MDX 独立管线,暂无此修复:`.mdx` 里写加粗时,**闭合 `**` 前面避免紧跟中文括号等标点**(如 `**……(Silver Ore)**是…` 会失效),要么改用 `.md`,要么在闭合 `**` 后加一个空格。
