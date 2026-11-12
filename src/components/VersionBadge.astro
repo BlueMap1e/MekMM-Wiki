@@ -1,0 +1,39 @@
+---
+// 版本徽章:在条目开头标注数据适用的版本。
+// 用法:<VersionBadge versions={['1.4.3']} label="数据核对于模组版本" />
+interface Props {
+	versions: string[];
+	label?: string;
+}
+const { versions, label = '适用版本' } = Astro.props;
+---
+
+<p class="version-badge">
+	<span class="version-badge__label">{label}</span>
+	{versions.map((version) => (
+		<code class="version-badge__pill">{version}</code>
+	))}
+</p>
+
+<style>
+	.version-badge {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.375rem;
+		margin: 0 0 0.75rem;
+	}
+	.version-badge__label {
+		font-size: 0.8rem;
+		opacity: 0.7;
+	}
+	.version-badge__pill {
+		padding: 0.125rem 0.5rem;
+		border: 1px solid var(--sl-color-accent);
+		border-radius: 999px;
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-accent-high);
+		font-size: 0.8rem;
+		line-height: 1.4;
+	}
+</style>

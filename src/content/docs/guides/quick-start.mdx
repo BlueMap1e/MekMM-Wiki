@@ -1,0 +1,65 @@
+---
+title: 快速上手
+description: 如何在本地运行 Wiki、编写新条目并发布上线。
+---
+
+本站所有条目都是仓库里的 Markdown / MDX 文件,写条目 = 提交文件,不需要碰任何数据库。
+
+## 准备环境
+
+- [Node.js](https://nodejs.org) 18.17 以上(推荐 22 LTS,仓库已带 `.nvmrc`)
+- Git
+
+## 本地运行
+
+```bash
+git clone https://github.com/BlueMap1e/MekMM-Wiki.git
+cd MekMM-Wiki
+npm install
+npm run dev
+```
+
+浏览器打开 http://localhost:4321,改动文件即时热更新。
+
+## 写一个新条目
+
+在 `src/content/docs/` 下新建文件,**文件路径就是链接路径**(建议文件名用英文、标题写中文):
+
+```md
+---
+title: 终极氧化工厂
+description: 一句话简介,会出现在搜索结果与页面描述里。
+---
+
+正文用 Markdown 书写。
+```
+
+保存后侧边栏会自动出现该条目,无需手动登记导航。
+
+## 条目里可以用的东西
+
+提示框(aside)语法:
+
+```md
+:::note[提示]
+这是带标题的提示框。
+:::
+```
+
+自定义组件(需要 `.mdx` 扩展名):
+
+```mdx
+import VersionBadge from '../../../components/VersionBadge.astro';
+
+<VersionBadge versions={['1.4.3']} label="数据核对于模组版本" />
+```
+
+## 发布
+
+```bash
+git add -A
+git commit -m "添加条目:终极氧化工厂"
+git push
+```
+
+推送后 Cloudflare Pages 会自动构建并上线,约一两分钟生效,本地不需要任何部署命令。

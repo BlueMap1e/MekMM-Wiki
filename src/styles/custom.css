@@ -1,0 +1,14 @@
+/* MekMM Wiki 主题微调:把强调色换成通用机械风格的青绿色。
+   Starlight 的颜色全部走 --sl-color-* 变量,想调整其他颜色直接覆盖对应变量即可。 */
+
+:root {
+	--sl-color-accent-high: #0e7490;
+	--sl-color-accent: #0891b2;
+	--sl-color-accent-low: #164e63;
+}
+
+:root[data-theme='dark'] {
+	--sl-color-accent-high: #67e8f9;
+	--sl-color-accent: #22d3ee;
+	--sl-color-accent-low: #164e63;
+}
