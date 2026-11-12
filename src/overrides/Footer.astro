@@ -21,12 +21,12 @@ const year = new Date().getFullYear();
 <style>
 	/* Astro 会给组件样式加作用域,:root 级别的变量必须用 :global() 才能挂到 <html> 上 */
 	:global(:root) {
-		--mekmm-footer-text: #334155;
-		--mekmm-footer-muted: #64748b;
+		--mekmm-footer-text: #eeeeee;
+		--mekmm-footer-muted: #b4b4b4;
 	}
-	:global(:root[data-theme='dark']) {
-		--mekmm-footer-text: #e2e8f0;
-		--mekmm-footer-muted: #94a3b8;
+	:global(:root[data-theme='light']) {
+		--mekmm-footer-text: #202020;
+		--mekmm-footer-muted: #646464;
 	}
 	.mekmm-footer {
 		border-top: 1px solid color-mix(in srgb, var(--mekmm-footer-muted) 35%, transparent);

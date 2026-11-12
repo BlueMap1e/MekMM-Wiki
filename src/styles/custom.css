@@ -1,4 +1,37 @@
-/* MekMM Wiki 主题微调(装修梯度②:覆盖 Starlight 的 --sl-* 变量) */
+/* MekMM Wiki 主题微调(装修梯度②:覆盖 Starlight 的 --sl-* 变量)
+   灰阶方案:整套中性灰取自 Radix Colors 官方发布值(npm 包 @radix-ui/colors 的
+   gray.css / gray-dark.css,按 Starlight 各变量的明度角色就近映射),不含自创色值。
+   注意:Starlight 的 :root 默认即深色模式,浅色走 :root[data-theme='light']。 */
+
+:root {
+	--sl-color-white: #eeeeee;
+	--sl-color-gray-1: #eeeeee;
+	--sl-color-gray-2: #b4b4b4;
+	--sl-color-gray-3: #7b7b7b;
+	--sl-color-gray-4: #606060;
+	--sl-color-gray-5: #3a3a3a;
+	--sl-color-gray-6: #2a2a2a;
+	--sl-color-gray-7: #eeeeee;
+	--sl-color-black: #191919;
+	--sl-color-accent-high: #eeeeee;
+	--sl-color-accent: #b4b4b4;
+	--sl-color-accent-low: #313131;
+}
+
+:root[data-theme='light'] {
+	--sl-color-white: #202020;
+	--sl-color-gray-1: #202020;
+	--sl-color-gray-2: #646464;
+	--sl-color-gray-3: #646464;
+	--sl-color-gray-4: #8d8d8d;
+	--sl-color-gray-5: #bbbbbb;
+	--sl-color-gray-6: #f0f0f0;
+	--sl-color-gray-7: #f9f9f9;
+	--sl-color-black: #ffffff;
+	--sl-color-accent-high: #202020;
+	--sl-color-accent: #646464;
+	--sl-color-accent-low: #e0e0e0;
+}
 
 /* 字体栈:只用系统中文字体,不加载网络字体——中文 webfont 动辄数 MB,得不偿失 */
 :root {
@@ -8,17 +41,4 @@
 	--sl-font-mono:
 		'Cascadia Code', 'JetBrains Mono', Consolas, 'Noto Sans Mono CJK SC',
 		monospace;
-}
-
-/* 强调色:石墨蓝(slate 系低饱和蓝),沉稳不刺眼 */
-:root {
-	--sl-color-accent-high: #1e293b;
-	--sl-color-accent: #475569;
-	--sl-color-accent-low: #dbe3ee;
-}
-
-:root[data-theme='dark'] {
-	--sl-color-accent-high: #c3d0e0;
-	--sl-color-accent: #8aa3bd;
-	--sl-color-accent-low: #1c2531;
 }
