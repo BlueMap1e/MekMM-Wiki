@@ -1,6 +1,9 @@
 ---
 // 自定义页脚:在 astro.config.mjs 的 components.Footer 里挂载,替换官方默认页脚(装修梯度④)。
 // 页脚属于站点外观,文案随便改;这里保持克制,只放站点归属信息。
+//
+// 颜色不用 Starlight 的灰阶变量(它们在深浅主题下方向相反,语义容易踩坑),
+// 而是自定义一套页脚专用变量,明暗两套值都写死,保证对比度可控。
 const year = new Date().getFullYear();
 ---
 
@@ -18,8 +21,17 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
+	/* Astro 会给组件样式加作用域,:root 级别的变量必须用 :global() 才能挂到 <html> 上 */
+	:global(:root) {
+		--mekmm-footer-text: #334155;
+		--mekmm-footer-muted: #64748b;
+	}
+	:global(:root[data-theme='dark']) {
+		--mekmm-footer-text: #e2e8f0;
+		--mekmm-footer-muted: #94a3b8;
+	}
 	.mekmm-footer {
-		border-top: 1px solid var(--sl-color-gray-5, #475569);
+		border-top: 1px solid color-mix(in srgb, var(--mekmm-footer-muted) 35%, transparent);
 		margin-top: 3rem;
 		padding: 1.25rem 0 2rem;
 	}
@@ -33,16 +45,16 @@ const year = new Date().getFullYear();
 	}
 	.mekmm-footer p {
 		margin: 0;
-		color: var(--sl-color-gray-6, #94a3b8);
-		font-size: 0.8rem;
+		color: var(--mekmm-footer-muted);
+		font-size: 0.85rem;
 	}
 	.mekmm-footer a {
-		color: var(--sl-color-gray-4, #cbd5e1);
+		color: var(--mekmm-footer-text);
 		text-decoration-color: var(--sl-color-accent);
 		text-underline-offset: 3px;
 	}
 	.mekmm-footer a:hover {
-		color: var(--sl-color-accent-high, #67e8f9);
+		color: var(--sl-color-accent-high);
 	}
 	@media (max-width: 50rem) {
 		.mekmm-footer__inner {
