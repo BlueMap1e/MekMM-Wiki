@@ -90,6 +90,7 @@ Cloudflare Dashboard → Workers & Pages → MekMM-Wiki → **Deployments**:
 1. 本地 `npm run build` 复现报错;
 2. 常见原因:frontmatter 字段拼错、`.mdx` 里把 `<`、`{}` 当正文写(MDX 会当组件/表达式解析,普通写法请用 `.md`);
 3. 构建失败不会影响线上旧版本,放心修。
+4. 已知案例(2026-11-12):Cloudflare 上 `npm ci` 报 `Missing @pagefind/linux-arm64@1.6.0`。根因是 pagefind@1.6.0 上游漏发了两个平台包(npm 注册表里根本没有,任何机器都写不进 lockfile),本地 `npm install` 宽容跳过所以一直是绿的。已在 `package.json` 用 `overrides` 把 pagefind 钉在 1.5.2;上游发布修复版本后可移除该 overrides。
 
 ### 绑定自定义域名(可选)
 
