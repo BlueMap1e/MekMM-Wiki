@@ -14,7 +14,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/BlueMap1e/MekMM-Wiki',
+					href: 'https://github.com/lostmyself8/Mekanism-MoreMachine',
 				},
 			],
 			// 单语言站:把根语言设为简体中文,UI 字符串(如"搜索""编辑此页")会自动中文化
