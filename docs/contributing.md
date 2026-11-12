@@ -54,3 +54,13 @@ import VersionBadge from '../../../components/VersionBadge.astro';
 - **数据同步**:写 `scripts/sync-mod.mjs` 从模组仓库同步 `zh_cn.json` / 配方 JSON,批量生成条目骨架(Astro Content Layer 可以直接读 JSON,几百个条目不用手搓)
 - **结构化条目**:给机器条目定义 Zod schema,frontmatter 写能耗、配方等字段,统一渲染成信息框,漏填字段构建直接报错
 - **多语言**:模组本身有 8 种语言文件,Starlight 内置 i18n 路由,想开英文版加个目录就行
+
+## 新增顶层分类
+
+侧边栏分组在 `astro.config.mjs` 的 `sidebar` 数组里登记(`label` 为显示名,`autogenerate.directory` 为文件夹名)。**已有分类内新增条目是全自动的;只有新建顶层文件夹才需要加一行登记**:
+
+```js
+{ label: '资料', items: [{ autogenerate: { directory: 'resources' } }] },
+```
+
+改完 `npm run build` 验证,再推送。
