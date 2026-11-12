@@ -47,6 +47,8 @@ description: 一句话简介,进搜索索引与 meta 描述
 
 侧边栏由 `astro.config.mjs` 里的 `sidebar` 按目录自动生成(`autogenerate`),新建文件即自动上架,不用登记。
 
+> **内容红线**:未经作者确认的模组设定(机器等级、版本号、配方数值、方块结构等)不要写进条目与站点文案;数据以游戏内实测或作者确认为准。引用模组版本请查 GitHub Release 页,本地仓库工作副本的 `gradle.properties` 不是发布事实。
+
 ### 好用的语法
 
 - 提示框:`:::note[标题] … :::`(还有 `tip` / `caution` / `danger`)
@@ -65,7 +67,7 @@ description: 一句话简介,进搜索索引与 meta 描述
 
 - 全站强调色与字体:`src/styles/custom.css`,覆盖 `--sl-color-accent*`、`--sl-font*` 变量(字体走系统栈,不加载中文 webfont)
 - 新组件:放 `src/components/`,条目顶部 `import` 后直接当标签用(文件需 `.mdx`)
-- 页头齿轮 logo 与首页横幅截自模组官方 logo:`npm run crop-logo` 重新生成(`scripts/crop-logo.mjs`)
+- 页头齿轮 logo 截自模组官方 logo:`npm run crop-logo` 重新生成(`scripts/crop-logo.mjs`)
 
 ## 部署与日常运维(Cloudflare Pages)
 
