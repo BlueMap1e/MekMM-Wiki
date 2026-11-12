@@ -10,15 +10,15 @@
 		monospace;
 }
 
-/* 强调色:通用机械风格的青绿色 */
+/* 强调色:石墨蓝(slate 系低饱和蓝),沉稳不刺眼 */
 :root {
-	--sl-color-accent-high: #0e7490;
-	--sl-color-accent: #0891b2;
-	--sl-color-accent-low: #164e63;
+	--sl-color-accent-high: #1e293b;
+	--sl-color-accent: #475569;
+	--sl-color-accent-low: #dbe3ee;
 }
 
 :root[data-theme='dark'] {
-	--sl-color-accent-high: #67e8f9;
-	--sl-color-accent: #22d3ee;
-	--sl-color-accent-low: #164e63;
+	--sl-color-accent-high: #c3d0e0;
+	--sl-color-accent: #8aa3bd;
+	--sl-color-accent-low: #1c2531;
 }
