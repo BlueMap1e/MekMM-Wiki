@@ -16,6 +16,8 @@ description: 一句话简介,进搜索索引与 meta 描述
 侧边栏由 `astro.config.mjs` 里的 `sidebar` 按目录自动生成(`autogenerate`),新建文件即自动上架,不用登记。
 
 > **内容红线**:未经作者确认的模组设定(机器等级、版本号、配方数值、方块结构等)不要写进条目与站点文案;数据以游戏内实测或作者确认为准。引用模组版本请查 GitHub Release 页,本地仓库工作副本的 `gradle.properties` 不是发布事实。
+>
+> **投稿授权**:向本站提交内容即视为同意以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 授权发布(署名-相同方式共享)。
 
 ## 好用的语法
 

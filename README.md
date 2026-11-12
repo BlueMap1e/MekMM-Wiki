@@ -27,4 +27,4 @@ npm run build    # 构建产物到 dist/
 
 - 本站为**非官方**社区项目,与模组作者无隶属关系。
 - 模组 [Mekanism-MoreMachine](https://github.com/lostmyself8/Mekanism-MoreMachine) 以 [MIT License](https://github.com/lostmyself8/Mekanism-MoreMachine/blob/main/LICENSE) 发布,版权归模组作者 lostmyself8 所有;本站页头 logo 截自该仓库的官方素材,仅用于社区文档用途,在此致谢与署名。
-- 站点条目内容的授权协议待站点维护者确定后在此补充。
+- 本站的文字内容(条目、指南等)以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 授权:转载需署名并以相同协议共享。
