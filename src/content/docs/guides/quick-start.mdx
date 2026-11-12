@@ -3,6 +3,8 @@ title: 快速上手
 description: 如何在本地运行 Wiki、编写新条目并发布上线。
 ---
 
+import { Steps } from '@astrojs/starlight/components';
+
 本站所有条目都是仓库里的 Markdown / MDX 文件,写条目 = 提交文件,不需要碰任何数据库。
 
 ## 准备环境
@@ -12,12 +14,15 @@ description: 如何在本地运行 Wiki、编写新条目并发布上线。
 
 ## 本地运行
 
-```bash
-git clone https://github.com/BlueMap1e/MekMM-Wiki.git
-cd MekMM-Wiki
-npm install
-npm run dev
-```
+{/* 官方 Steps 组件(装修梯度③):给编号步骤加竖线装饰 */}
+
+<Steps>
+
+1. 克隆仓库:`git clone https://github.com/BlueMap1e/MekMM-Wiki.git`
+2. 安装依赖:`cd MekMM-Wiki && npm install`
+3. 启动开发服务器:`npm run dev`
+
+</Steps>
 
 浏览器打开 http://localhost:4321,改动文件即时热更新。
 

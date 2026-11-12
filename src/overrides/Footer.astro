@@ -1,0 +1,52 @@
+---
+// 自定义页脚:在 astro.config.mjs 的 components.Footer 里挂载,替换官方默认页脚(装修梯度④)。
+// 页脚属于站点外观,文案随便改;这里保持克制,只放站点归属信息。
+const year = new Date().getFullYear();
+---
+
+<footer class="mekmm-footer">
+	<div class="mekmm-footer__inner">
+		<p>
+			© {year} MekMM Wiki · 模组
+			<a href="https://github.com/lostmyself8/Mekanism-MoreMachine">Mekanism: More Machine</a>
+			by lostmyself8 · 站点由 <a href="https://github.com/BlueMap1e">BlueMap1e</a> 维护
+		</p>
+		<p class="mekmm-footer__powered">
+			<a href="https://starlight.astro.build">Powered by Starlight</a>
+		</p>
+	</div>
+</footer>
+
+<style>
+	.mekmm-footer {
+		border-top: 1px solid var(--sl-color-gray-5, #475569);
+		margin-top: 3rem;
+		padding: 1.25rem 0 2rem;
+	}
+	.mekmm-footer__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.5rem;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	.mekmm-footer p {
+		margin: 0;
+		color: var(--sl-color-gray-6, #94a3b8);
+		font-size: 0.8rem;
+	}
+	.mekmm-footer a {
+		color: var(--sl-color-gray-4, #cbd5e1);
+		text-decoration-color: var(--sl-color-accent);
+		text-underline-offset: 3px;
+	}
+	.mekmm-footer a:hover {
+		color: var(--sl-color-accent-high, #67e8f9);
+	}
+	@media (max-width: 50rem) {
+		.mekmm-footer__inner {
+			flex-direction: column;
+		}
+	}
+</style>

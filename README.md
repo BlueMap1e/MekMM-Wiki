@@ -53,10 +53,19 @@ description: 一句话简介,进搜索索引与 meta 描述
 - 代码块带复制按钮、表格、脚注均开箱即用
 - 中文搜索:内建 Pagefind,构建时自动生成索引,无需配置
 
-### 修改主题
+### 修改主题(装修梯度)
 
-- 全站强调色:`src/styles/custom.css`,覆盖 `--sl-color-accent*` 变量
-- 新组件:放 `src/components/`,条目顶部 `import` 后直接当 HTML 标签用
+| 梯度 | 手段 | 本站示例 |
+| ---- | ---- | -------- |
+| ① 配置 | `astro.config.mjs` 改字段 | 顶栏 logo、社交链接、侧边栏 |
+| ② 刷漆 | `src/styles/custom.css` 覆盖 `--sl-*` 变量 | 青绿强调色、中文字体栈 |
+| ③ 官方组件 | 条目里 import Starlight 自带组件 | 首页 `Card`/`CardGrid`、指南 `Steps` |
+| ④ 组件覆盖 | `astro.config.mjs` 的 `components` 挂自己的组件 | 自定义页脚 `src/overrides/Footer.astro` |
+| ⑤ 砸墙 | `StarlightPage` 造自定义页面 / 插件系统 | 待玩 |
+
+- 全站强调色与字体:`src/styles/custom.css`,覆盖 `--sl-color-accent*`、`--sl-font*` 变量(字体走系统栈,不加载中文 webfont)
+- 新组件:放 `src/components/`,条目顶部 `import` 后直接当标签用(文件需 `.mdx`)
+- 页头齿轮 logo 与首页横幅截自模组官方 logo:`npm run crop-logo` 重新生成(`scripts/crop-logo.mjs`)
 
 ## 部署与日常运维(Cloudflare Pages)
 

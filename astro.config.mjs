@@ -10,6 +10,8 @@ export default defineConfig({
 		starlight({
 			title: 'MekMM Wiki',
 			description: '通用机械:更多机器(Mekanism: More Machine)中文百科',
+			// 顶栏 logo:模组官方横幅左下角的齿轮(scripts/crop-logo.mjs 裁出)
+			logo: { src: './src/assets/logo-gear.png' },
 			social: [
 				{
 					icon: 'github',
@@ -32,6 +34,10 @@ export default defineConfig({
 				{ label: '指南', items: [{ autogenerate: { directory: 'guides' } }] },
 				{ label: '机器', items: [{ autogenerate: { directory: 'machines' } }] },
 			],
+			// 组件覆盖(装修梯度④):用自己的组件替换 Starlight 官方组件
+			components: {
+				Footer: './src/overrides/Footer.astro',
+			},
 			customCss: ['./src/styles/custom.css'],
 		}),
 	],

@@ -1,6 +1,16 @@
-/* MekMM Wiki 主题微调:把强调色换成通用机械风格的青绿色。
-   Starlight 的颜色全部走 --sl-color-* 变量,想调整其他颜色直接覆盖对应变量即可。 */
+/* MekMM Wiki 主题微调(装修梯度②:覆盖 Starlight 的 --sl-* 变量) */
 
+/* 字体栈:只用系统中文字体,不加载网络字体——中文 webfont 动辄数 MB,得不偿失 */
+:root {
+	--sl-font:
+		system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+		'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+	--sl-font-mono:
+		'Cascadia Code', 'JetBrains Mono', Consolas, 'Noto Sans Mono CJK SC',
+		monospace;
+}
+
+/* 强调色:通用机械风格的青绿色 */
 :root {
 	--sl-color-accent-high: #0e7490;
 	--sl-color-accent: #0891b2;

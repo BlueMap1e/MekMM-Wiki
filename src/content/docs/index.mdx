@@ -3,6 +3,9 @@ title: MekMM Wiki
 description: '通用机械:更多机器(Mekanism: More Machine)中文百科'
 hero:
   tagline: '通用机械:更多机器(Mekanism: More Machine)的中文百科,条目基于模组源码与游戏内实测。'
+  image:
+    file: ../../assets/banner.png
+    alt: 'Mekanism: More Machine 模组横幅'
   actions:
     - text: 快速上手
       link: /guides/quick-start
@@ -12,17 +15,24 @@ hero:
       link: /machines/recycler
 ---
 
-{/* 下面的介绍文字是我占位写的示例,请换成你自己的话或直接重写整个首页 */}
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## 这是什么
+{/* 整个首页都是排版示范:文字是我占位写的,结构(Card 卡片区、链接区)也随时可以推翻 */}
 
-「通用机械:更多机器」是 lostmyself8 开发的通用机械(Mekanism)扩展模组,在原版 5 级工厂之上追加至 9 级,并新增了数控加工三件套、复制机、无线输电站等大量原创内容。
+「通用机械:更多机器」是 lostmyself8 开发的通用机械(Mekanism)扩展模组,在原版 5 级工厂之上追加至 9 级,并新增了数控加工三件套、复制机、无线输电站等大量原创内容。本站是它的中文百科,全部源码开源。
 
-本站是它的中文百科,使用 Astro + Starlight 构建,全部源码开源。
-
-## 参与编辑
-
-看一眼[快速上手](/guides/quick-start),五分钟就能提交第一个条目。
+{/* 官方 Card 组件(装修梯度③) */}
+<CardGrid staggered>
+  <Card title="快速上手">
+    环境搭建、本地预览、发布流程,五分钟提交第一个条目。
+  </Card>
+  <Card title="机器图鉴">
+    从单方块机器到大型多方块结构,按目录浏览全部新增内容。
+  </Card>
+  <Card title="参与维护">
+    站点源码在 GitHub 开源,发现错漏欢迎提 Issue 或 PR。
+  </Card>
+</CardGrid>
 
 ## 相关链接
 
