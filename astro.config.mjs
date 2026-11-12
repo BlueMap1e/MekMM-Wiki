@@ -33,7 +33,7 @@ export default defineConfig({
 			sidebar: [
 				{ label: '指南', items: [{ autogenerate: { directory: 'guides' } }] },
 				{ label: '机器', items: [{ autogenerate: { directory: 'machines' } }] },
-				{ label: '资料', items: [{ autogenerate: { directory: 'resources' } }] },
+				{ label: '资源', items: [{ autogenerate: { directory: 'resources' } }] },
 			],
 			// 组件覆盖(装修梯度④):用自己的组件替换 Starlight 官方组件
 			components: {
